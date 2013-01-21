@@ -15,7 +15,7 @@
  * A RS-232 to USB cable allows to controle the board from the development computer.
  * The module is build using a cross-toolchaine created with Buildroot. 
  *     
-\*
+ */
 
 /*---- Includes ----*/
 #include <stdio.h>
@@ -31,8 +31,11 @@
 #include <native/mutex.h>
 
 
+// Declare a mutex
+
 static RT_MUTEX mutex; 
 
+// task1 routine
 
 void thread1 (void * unused)
 {
@@ -47,6 +50,8 @@ void thread1 (void * unused)
 	
 	
 }
+
+// task2 routine
 
 void thread2 (void * unused)
 {
@@ -112,7 +117,7 @@ int main(void)
 
 /*
  * End of file     
-\*
+ */
 
 
 
